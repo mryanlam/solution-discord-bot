@@ -1,6 +1,9 @@
 import discord
 
-client = discord.Client()
+intents = discord.Intents.default()
+intents.members = True
+client = discord.Client(intents=intents)
+
 
 guest_role_id = 762854964166787093
 
