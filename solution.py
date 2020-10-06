@@ -11,6 +11,7 @@ async def on_ready():
 @client.event
 async def on_member_join(member):
     # Assigns role on join
+    print("{} joined".format(member))
     guest_role = member.guild.get_role(guest_role_id)
     await member.add_roles(guest_role_id, reason="Guest User")
 
